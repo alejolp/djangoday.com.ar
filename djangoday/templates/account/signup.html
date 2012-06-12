@@ -15,7 +15,7 @@
         <p>Already have an account? <a href="/account/login/">Log In</a>!</p>
         
         <form class="signup uniForm" id="signup_form" method="post" action="/account/signup/">
-            <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="11aaf620ac71390fc2d439ee509a0c7b"></div>
+            {% csrf_token %}
             <fieldset class="inlineLabels">
                 
 
@@ -125,6 +125,6 @@
         
         
         
-        <p>If you have any trouble creating your account, contact us at <a href="mailto:djangocon@holdenweb.com">djangocon@holdenweb.com</a>.</p>
+        <p>Si tenes problema creando tu cuenta, contactanos en: santiago.basulto {arroba} gmail {punto} com.</p>
 
 {% endblock %}

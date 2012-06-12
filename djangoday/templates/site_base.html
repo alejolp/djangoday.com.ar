@@ -4,6 +4,7 @@
 {% load i18n %}
 
 {% block extra_head_base %}
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.png">
     <link href="{{ STATIC_URL }}css/site.css" rel="stylesheet" type="text/css" />
     <link href="{{ STATIC_URL }}css/screen.css" rel="stylesheet" type="text/css" />
     <link href="{{ STATIC_URL }}css/djangoday.css" rel="stylesheet" type="text/css" />
@@ -23,7 +24,9 @@
                 <h1>DjangoDay - Argentina - La Plata - 2012</h1>
             </div>
             <div id='logo-header'>
-            {% include "_account_bar.html" %}
+            <div id="account-bar">
+            <a href="https://eventioz.com/events/djangoday">Registrate Ahora!</a>
+            </div>
             </div>
         </div>
         <nav id="page_nav">
@@ -52,6 +55,18 @@
 {% endblock %}
 
 {% block extra_body_base %}
-    {% analytics %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32417937-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
     {% block extra_body %}{% endblock %}
 {% endblock %}

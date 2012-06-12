@@ -1,7 +1,8 @@
 {% extends "site_base.html" %}
 
-{% load i18n %}
+{% load i18n  %}
 {% load biblion_tags %}
+{% load thumbnail %}
 
 {% block head_title %}Organizadores{% endblock %}
 
@@ -36,7 +37,8 @@
     <img width="265" height="199" src="/site_media/static/img/people/nachomartinez.jpg"><p><em>Nacho Martinez</em></p>
 </a>
 <a class="framed" href="https://twitter.com/#!/santiagobasulto">
-    <img width="265" height="199" src="/site_media/static/img/people/santiagob.jpg"><p><em>Santiago Basulto</em></p>
+   <img width="265" height="199" src="/site_media/static/img/people/santiagob.jpg"><p><em>Santiago Basulto</em></p>
+   {# <img width="265" height="199" src="{% thumbnail "people/santiagob.jpg" %}"><p><em>Santiago Basulto</em>#}
 </a>
 </section>
 

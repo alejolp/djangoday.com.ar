@@ -14,9 +14,7 @@
 </p>
 
 <form class="login uniForm" method="POST" action="/account/login/">
-    <div style="display:none">
-        <input type="hidden" name="csrfmiddlewaretoken" value="11aaf620ac71390fc2d439ee509a0c7b">
-    </div>
+{% csrf_token %}
     <fieldset class="inlineLabels">
         <div class="form_block">
             <a href="/account/password_reset/">Forgot password?</a>
